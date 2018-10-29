@@ -88,7 +88,7 @@ while running:
     for badguy in badguys:
         if badguy[0] <- 64:
             badguys.pop(index)
-        badguy[0] -= 7
+        badguy[0] -= 4
         # 6.3.1 Attack Castle
         badrect = pygame.Rect(badguyimg.get_rect())
         badrect.top = badguy[1]
