@@ -161,13 +161,25 @@ while running:
 
     # 9. Update Player Position
     if keys[0]:
-        playerpos[1] -= 5
+        if playerpos[1] <= 0:
+            playerpos[1] = 0
+        else:
+            playerpos[1] -= 5
     elif keys[2]:
-        playerpos[1] += 5
+        if playerpos[1] >= 480:
+            playerpos[1] = 480
+        else:
+            playerpos[1] += 5
     if keys[1]:
-        playerpos[0] -= 5
+        if playerpos[0] <= 0:
+            playerpos[0] = 0
+        else:
+            playerpos[0] -= 5
     elif keys[3]:
-        playerpos[0] += 5
+        if playerpos[0] >= 640:
+            playerpos[0] = 640
+        else:
+            playerpos[0] += 5
 
     # 10. Win/Lose Check
     if pygame.time.get_ticks() >= 90000:
